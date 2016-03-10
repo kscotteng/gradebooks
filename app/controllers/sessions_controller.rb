@@ -8,6 +8,12 @@ class SessionsController < ApplicationController
       session[:id] = teacher.id
       session[:user_type] = "Teacher"
       redirect_to teachers_path
+    elsif student && student.authenticate(params[:password])
+      session[:id] = student.id
+      session[:user_type] = "Student"
+      redirect_to students_path  
+
+
     else
       # redirect_to sessions_login_path
       flash[:notice] = "Incorrect Email/Password"
