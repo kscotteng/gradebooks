@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     elsif parent && parent.authenticate(params[:password])
       session[:id] = parent.id
       session[:user_type] = "Parent"
-      redirect_to parent_path
+      redirect_to parents_path
 
 
 

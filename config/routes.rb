@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   get 'sessions/login'
   post 'sessions/login'
 
+  get 'students/login'
+  post 'students/login'
+
+  get 'parents/login'
+  post 'parents/login'
+
   get 'sessions/logout'
 
 
